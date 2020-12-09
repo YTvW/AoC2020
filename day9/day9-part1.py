@@ -45,10 +45,7 @@ for i in range(len(inputData)):
         # print(inputData[i+offset])
         offset +=1
     if sum == invalidEntry and len(continousValues)> 1:
-        print(sum)
         continousValues.sort()
-        print(str(continousValues[0]) + " is lowest value")
-        print(str(continousValues[-1]) + " is highest value")
         print("result: " + str(continousValues[0] + continousValues[-1]))
         print(str(continousValues) + " is list")
         pass

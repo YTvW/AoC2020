@@ -47,11 +47,11 @@ for i in range(len(inputData)):
     if sum == invalidEntry and len(continousValues)> 1:
         continousValues.sort()
         print("result: " + str(continousValues[0] + continousValues[-1]))
-        print(str(continousValues) + " is list")
+        # print(str(continousValues) + " is list")
         pass
-    elif sum < invalidEntry:
-        print(continousValues)
-        print(len(continousValues))
+    # elif sum < invalidEntry:
+    #     print(continousValues)
+    #     print(len(continousValues))
     # print(continousValues)
 
 # print(str(invalidEntry) + " is not confirm preamble")

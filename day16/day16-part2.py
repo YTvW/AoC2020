@@ -13,7 +13,6 @@ fieldOrder = {}
 
 def CheckField(value):
     temp = []
-    # print(value)
     for items in fields:
         l1l = fields[items][0][0]
         l1h = fields[items][0][1]
@@ -29,12 +28,11 @@ for line in fileinput.input("./input.txt"):
     cleanLine = line.encode("utf-8").strip("\n")
     match = search("^([a-z\s]*):\s([0-9\-]*)\sor\s([0-9\-]*)|^([a-z\s]*:$)|(^[0-9,]+$)",cleanLine)
     if match  != None:
-
         if match.group(1)!= None:
             rangeList1 =match.group(2).split("-")
             rangeList2 =match.group(3).split("-")
             fields[match.group(1)] = [(int(rangeList1[0]),int(rangeList1[1])),(int(rangeList2[0]),int(rangeList2[1]))]
-            
+
             if int(rangeList1[0]) < lowestRange:
                 lowestRange = int(rangeList1[0])
             elif int(rangeList1[1]) > highestRange:
@@ -105,7 +103,6 @@ while len(selectedFields.keys()) != len(nearby_tickets[0]):
                 if value == max_value:
                     validFields.append(key)
             if len(validFields) == 1:
-                print("adding new field")
                 selectedFields[validFields[0]] = keys
                 colums[keys] = []
 

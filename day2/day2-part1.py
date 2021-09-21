@@ -1006,13 +1006,11 @@ count = 0;
 for entry in input:
     letter = entry.split(" ")[1].split(":")[0]
     amount = entry.split(" ")[2].count(letter)
-    highlimit = entry.split(" ")[0].split("-")[1]
-    lowlimit = entry.split(" ")[0].split("-")[0]
+    lowlimit,highlimit = entry.split(" ")[0].split("-")
 
-    if ( int(amount) >= int(lowlimit)):
-        if (int(amount) <= int(highlimit)):
-            count += 1
-            pass
+    if (( int(amount) >= int(lowlimit))&(int(amount) <= int(highlimit))):
+        count += 1
+        pass
 
     pass
 
